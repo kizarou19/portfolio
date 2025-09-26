@@ -1,9 +1,193 @@
-<!DOCTYPE html>
-<html>
+PORTFLIO à l'aide de faizad :
+
+<!doctype html>
+<html lang="fr">
 <head>
-    <title>Mon portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Bacar-Baou Elly</title>
+  <meta name="description" content="Portfolio de Votre Bacar-Baou Elly — Adminisrateur système & réseau / designer / étudiant" />
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#94a3b8; --accent:#06b6d4; --glass:rgba(255,255,255,0.04);
+      --radius:14px; --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,'Helvetica Neue',Arial;color:#e6eef6;background:linear-gradient(180deg,#071029 0%, #071827 60%)}
+    .container{max-width:var(--maxw);margin:36px auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .avatar{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px}
+    nav a.cta{background:var(--accent);padding:8px 12px;border-radius:10px;color:#042027}
+
+    main{margin-top:26px}
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:center}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:22px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(2,6,23,0.6);backdrop-filter: blur(6px)}
+    .hero h1{margin:0;font-size:32px}
+    .muted{color:var(--muted);margin-top:8px}
+    .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .tag{padding:6px 10px;border-radius:999px;background:var(--glass);font-size:13px;color:var(--muted)}
+
+    .projects{margin-top:26px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .project{padding:16px;border-radius:12px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));min-height:140px;display:flex;flex-direction:column;justify-content:space-between}
+    .project h3{margin:0 0 8px 0}
+    .project p{margin:0 0 12px 0;color:var(--muted);font-size:14px}
+    .btn{display:inline-block;padding:8px 12px;border-radius:10px;text-decoration:none;font-weight:600}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+    .btn.primary{background:var(--accent);color:#042027}
+
+    .skills{margin-top:20px;display:flex;gap:12px;flex-wrap:wrap}
+    .skill{background:var(--glass);padding:8px 10px;border-radius:10px;color:var(--muted)}
+
+    .contact{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}
+    form{display:flex;flex-direction:column;gap:10px}
+    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:10px;color:inherit}
+    textarea{min-height:120px}
+
+    footer{margin-top:28px;color:var(--muted);font-size:14px;text-align:center}
+
+    /* Responsive */
+    @media (max-width:900px){.hero{grid-template-columns:1fr}.projects{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:600px){.projects{grid-template-columns:1fr}.contact{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
-    <h1>Bonjour Github !</h1>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="avatar">VN</div>
+        <div>
+          <div style="font-weight:700">Votre Nom</div>
+          <div class="muted" style="font-size:13px">Développeur · Étudiant · Créatif</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#projects">Projets</a>
+        <a href="#about">À propos</a>
+        <a href="#contact" class="cta">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="card">
+          <h1>Bonjour — je suis Bacar-Baou Elly.</h1>
+          <p class="muted">Étudiant en BTS SIO, dans le domaine de L'SISR (réseaux) et des outils orientés dans la cybersécurité. J'aime résoudre des problèmes et apprendre de nouvelles technologies.</p>
+          <div class="tags">
+            <span class="tag">HTML &amp;</span>
+            <span class="tag">Git / GitHub</span>
+          </div>
+
+          <div style="margin-top:16px;display:flex;gap:10px">
+            <a class="btn primary" href="#contact">Me contacter</a>
+            <a class="btn ghost" href="#projects">Voir mes projets</a>
+          </div>
+        </div>
+
+        <aside style="display:flex;flex-direction:column;gap:12px">
+          <div class="card">
+            <h3>Compétences clés</h3>
+            <div class="skills">
+              <span class="skill">PHP</span>
+              <span class="skill">MySQL</span>
+              <span class="skill">React</span>
+              <span class="skill">Linux</span>
+              <span class="skill">API REST</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Disponibilité</h3>
+            <p class="muted" style="margin:6px 0 0 0">Stage / Freelance — Disponible à partir de maintenant.</p>
+          </div>
+        </aside>
+      </section>
+
+      <section id="projects" class="projects" aria-label="Projets">
+        <article class="project card">
+          <div>
+            <h3>Projet 1 — Site e-commerce</h3>
+            <p>Site e-commerce développé en PHP, intégration d'un système de panier et paiement test.</p>
+          </div>
+          <div style="display:flex;gap:8px">
+            <a class="btn ghost" href="#">Code</a>
+            <a class="btn primary" href="#">Démo</a>
+          </div>
+        </article>
+
+        <article class="project card">
+          <div>
+            <h3>Projet 2 — Portail association</h3>
+            <p>Portail public/privé pour une association avec gestion des membres et contenu restreint.</p>
+          </div>
+          <div style="display:flex;gap:8px">
+            <a class="btn ghost" href="#">Code</a>
+            <a class="btn primary" href="#">Démo</a>
+          </div>
+        </article>
+
+        <article class="project card">
+          <div>
+            <h3>Projet 3 — Honeypot (BTS SIO)</h3>
+            <p>Installation et configuration d'un honeypot pour l'analyse des tentatives d'intrusion.</p>
+          </div>
+          <div style="display:flex;gap:8px">
+            <a class="btn ghost" href="#">Docs</a>
+            <a class="btn primary" href="#">Rapport</a>
+          </div>
+        </article>
+      </section>
+
+      <section id="about" style="margin-top:22px">
+        <div class="card">
+          <h2>À propos</h2>
+          <p class="muted">Je suis en première année de BTS SIO, passionné par le développement sur-mesure et la cybersécurité. J'aime construire des projets utiles, documenter mes choix techniques et travailler en équipe via Git/GitHub.</p>
+
+          <h3 style="margin-top:12px">Expérience &amp; Formation</h3>
+          <ul class="muted">
+            <li>BTS SIO — Développement &amp; Administration (en cours)</li>
+            <li>Projets scolaires : site associatif, honeypot, mini-CRM</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="card">
+          <h2>Contact</h2>
+          <form action="mailto:votre.email@example.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Votre nom" required />
+            <input type="email" name="email" placeholder="Votre e‑mail" required />
+            <textarea name="message" placeholder="Votre message" required></textarea>
+            <div style="display:flex;gap:8px;margin-top:6px">
+              <button type="submit" class="btn primary">Envoyer</button>
+              <a class="btn ghost" href="/CV.pdf">Télécharger CV</a>
+            </div>
+          </form>
+        </div>
+
+        <div class="card">
+          <h3>Réseaux</h3>
+          <p class="muted">Vous pouvez aussi me retrouver ici :</p>
+          <ul style="margin:10px 0 0 0;padding:0;list-style:none;">
+            <li class="muted">• GitHub : <a href="#">github.com/votreprofil</a></li>
+            <li class="muted">• LinkedIn : <a href="#">linkedin.com/in/votreprofil</a></li>
+            <li class="muted">• Telegram / WhatsApp : <span class="muted">+33 ...</span></li>
+          </ul>
+
+          <h3 style="margin-top:12px">Projets open-source</h3>
+          <p class="muted">Contributeur à des petits outils, scripts et templates. Voir le GitHub pour la liste complète.</p>
+        </div>
+      </section>
+
+      <footer>
+        <div class="muted">© <span id="year"></span> Votre Nom — Tous droits réservés</div>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
